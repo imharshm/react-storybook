@@ -25,7 +25,7 @@ export const CustomizeButtonStory = (args) => {
   const functionResult = changeHandler(text);
   return <Button {...args} text={functionResult} />;
 };
-export const Primary = () => <Button variant="primary" withIcon={false} text="primary"></Button>;
+export const Primary = () => <Button variant="primary" withIcon={false} text="primary1"></Button>;
 export const IconPrimary = () => (
   <Button variant="primary" withIcon={true} iconName="add" text="Icon Button"></Button>
 );
