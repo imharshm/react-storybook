@@ -18,16 +18,15 @@ const StyledButton = styled(ReactButton)`
   border-radius: 4px;
   transition: all 0.5s ease-in-out;
   position: relative;
-  &:hover {
+  &:hover,
+  &:focus {
     opacity: 0.82;
     outline: none;
-  }
-  &:focus {
-    outline: none;
+    box-shadow: none;
   }
   &.btn-secondary {
     background: transparent;
-    border: 1px solid transparent;
+    border: 1px solid var(--primary);
     color: var(--primary);
     &:hover {
       border-color: transparent;
@@ -48,18 +47,18 @@ const Button = (props) => {
   return (
     <StyledButton {...props}>
       {props.iconPosition && props.iconPosition === "left" && props.withIcon && props.text ? (
-        <i className="material-icons mr-1">{props.iconName}</i>
+        <i className={`fa fa-${props.iconName} mr-1`}></i>
       ) : (
         ""
       )}
       {props.text && props.text}
       {props.iconPosition && props.iconPosition === "right" && props.withIcon && props.text ? (
-        <i className="material-icons ml-1">{props.iconName}</i>
+        <i className={`fa fa-${props.iconName} ml-1`}></i>
       ) : (
         ""
       )}
       {!props.iconPosition && props.withIcon && !props.text ? (
-        <i className="material-icons">{props.iconName}</i>
+        <i className={`fa fa-${props.iconName}`}></i>
       ) : (
         ""
       )}
@@ -74,8 +73,8 @@ Button.propTypes = {
   /** * set it true to show button icon */
   withIcon: PropTypes.bool,
 
-  /** * If withIcon is true then add material icon name */
-  iconName: PropTypes.oneOf(["add", "arrow_right_alt", "keyboard_arrow_right"]),
+  /** * If withIcon is true then add fontawesme icon name */
+  iconName: PropTypes.oneOf(["plus", "star", "angle-right"]),
 
   /** * Button label' */
   text: PropTypes.string.isRequired,
@@ -85,6 +84,7 @@ Button.propTypes = {
 };
 
 Button.defaultProps = {
+  variant: "primary",
   iconPosition: "left",
   withIcon: false,
   text: "Primary",
