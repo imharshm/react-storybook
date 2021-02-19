@@ -1,18 +1,10 @@
-import React from "react";
-import { Switch, Router, Route } from "react-router-dom";
-import PersonList from "./components/PersonList";
-import History from "./utils/History";
-import Contacts from "./components/Contacts";
+import React, { Component } from "react";
+import "./assets/css/App.scss";
 
-const App = () => {
-  return (
-    <Router history={History}>
-      <Switch>
-        <Route exact path="/user-list" component={PersonList}></Route>;
-        <Route path="/contact" component={Contacts}></Route>
-      </Switch>
-    </Router>
-  );
-};
+class App extends Component {
+  render() {
+    return <div className="App"></div>;
+  }
+}
 
 export default App;

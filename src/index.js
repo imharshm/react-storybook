@@ -3,20 +3,12 @@ import ReactDOM from "react-dom";
 import App from "./App";
 import "./assets/css/App.scss";
 import reportWebVitals from "./reportWebVitals";
-import Header from "./components/Header";
-import { Container } from "react-bootstrap";
-import AppProvider from "./theme/AppProvider";
 
 ReactDOM.render(
   <React.StrictMode>
-    <AppProvider>
-      <Header />
-      <Container className="main-container">
-        <App />
-      </Container>
-    </AppProvider>
+    <App />
   </React.StrictMode>,
-  document.getElementById("root"),
+  document.getElementById("root")
 );
 
 // If you want to start measuring performance in your app, pass a function
