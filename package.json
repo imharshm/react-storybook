@@ -1,6 +1,6 @@
 {
-  "homepage": "http://imharshm.github.io/learn-react-app",
-  "name": "learn-react-app",
+  "homepage": "http://imharshm.github.io/react-storybook",
+  "name": "react-storybook",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
