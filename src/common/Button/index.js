@@ -48,18 +48,18 @@ const Button = (props) => {
   return (
     <StyledButton {...props}>
       {props.iconPosition && props.iconPosition === "left" && props.withIcon && props.text ? (
-        <i className="material-icons mr-1">{props.iconName}</i>
+        <i className={`fa fa-${props.iconName} mr-1`}></i>
       ) : (
         ""
       )}
       {props.text && props.text}
       {props.iconPosition && props.iconPosition === "right" && props.withIcon && props.text ? (
-        <i className="material-icons ml-1">{props.iconName}</i>
+        <i className={`fa fa-${props.iconName} ml-1`}></i>
       ) : (
         ""
       )}
       {!props.iconPosition && props.withIcon && !props.text ? (
-        <i className="material-icons">{props.iconName}</i>
+        <i className={`fa fa-${props.iconName}`}></i>
       ) : (
         ""
       )}
@@ -75,7 +75,7 @@ Button.propTypes = {
   withIcon: PropTypes.bool,
 
   /** * If withIcon is true then add material icon name */
-  iconName: PropTypes.oneOf(["add", "arrow_right_alt", "keyboard_arrow_right"]),
+  iconName: PropTypes.oneOf(["plus", "star", "arrow_right"]),
 
   /** * Button label' */
   text: PropTypes.string.isRequired,
@@ -88,6 +88,6 @@ Button.defaultProps = {
   iconPosition: "left",
   withIcon: false,
   text: "Primary",
-  iconName: "add",
+  iconName: "plus",
 };
 export default Button;

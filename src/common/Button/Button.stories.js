@@ -27,29 +27,29 @@ export const CustomizeButtonStory = (args) => {
 };
 export const Primary = () => <Button variant="primary" withIcon={false} text="primary"></Button>;
 export const IconPrimary = () => (
-  <Button variant="primary" withIcon={true} iconName="add" text="Icon Button"></Button>
+  <Button variant="primary" withIcon={true} iconName="plus" text="Icon Button"></Button>
 );
 export const Link = () => <Button variant="link" text="Link"></Button>;
 export const IconLink = () => (
-  <Button variant="link" withIcon={true} iconName="add" text="Icon Link"></Button>
+  <Button variant="link" withIcon={true} iconName="plus" text="Icon Link"></Button>
 );
 export const Outline = () => <Button variant="secondary" text="Outline Button"></Button>;
 export const IconOutline = () => (
-  <Button variant="secondary" withIcon={true} iconName="add" text="Icon Outline"></Button>
+  <Button variant="secondary" withIcon={true} iconName="plus" text="Icon Outline"></Button>
 );
 export const IconRightOutline = () => (
   <Button
     variant="secondary"
     withIcon={true}
-    iconName="add"
+    iconName="plus"
     iconPosition="right"
     text="Right Icon Outline"
   ></Button>
 );
 export const SmallIconPrimary = () => (
-  <Button variant="primary" withIcon={true} iconName="add"></Button>
+  <Button variant="primary" withIcon={true} iconName="plus"></Button>
 );
 export const SmallIconSecondary = () => (
-  <Button variant="secondary" withIcon={true} iconName="add"></Button>
+  <Button variant="secondary" withIcon={true} iconName="plus"></Button>
 );
-export const SmallIconLink = () => <Button variant="link" withIcon={true} iconName="add"></Button>;
+export const SmallIconLink = () => <Button variant="link" withIcon={true} iconName="plus"></Button>;
